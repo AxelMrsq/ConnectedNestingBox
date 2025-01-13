@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Graphique T, H et W</title>
 </head>
 <body>
-    {% if valeurs.error %}
-        <p style="color: red;">{{ valeurs.error }}</p>
+    <h1>Graphique de l'évolution de T, H et W</h1>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
     {% else %}
-        <ul>
-        {% for cle, valeur in valeurs.items %}
-            <li><strong>{{ cle }}:</strong> {{ valeur }}</li>
-        {% endfor %}
-        </ul>
+        <img src="data:image/png;base64,{{ image_base64 }}" alt="Graphique de T, H et W">
     {% endif %}
 </body>
 </html>
