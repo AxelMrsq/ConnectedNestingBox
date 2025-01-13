@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if valeurs.error %}
+        <p style="color: red;">{{ valeurs.error }}</p>
+    {% else %}
+        <ul>
+        {% for cle, valeur in valeurs.items %}
+            <li><strong>{{ cle }}:</strong> {{ valeur }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
