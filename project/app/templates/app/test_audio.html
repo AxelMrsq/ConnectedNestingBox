@@ -20,7 +20,11 @@
                         <source src="{% static 'data/' %}{{ fichier }}" type="audio/mp3">
                         Votre navigateur ne supporte pas l'élément audio.
                     </audio>
-                    <button onclick="document.getElementById('audio_{{ fichier }}').play()">Play</button>
+                    <script>
+                        const audio = document.getElementById('audio-player');
+                        audio.addEventListener('play', () => console.log('Playing audio'));
+                        audio.addEventListener('pause', () => console.log('Audio paused'));
+                    </script>
                 </div>
             {% endfor %}
         </div>

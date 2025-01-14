@@ -13,7 +13,7 @@ def Home(request):
 
 def test(request):
     # Chemin du dossier contenant les fichiers txt
-    dossier_data = os.path.join(settings.BASE_DIR, 'app', 'data')
+    dossier_data = os.path.join(settings.BASE_DIR, 'app/static', 'data/')
 
     # Listes pour stocker les données de T, H et W
     heures = []
@@ -88,7 +88,7 @@ def test(request):
 
 def test_audio(request):
     # Chemin du dossier contenant les fichiers .wav
-    dossier_data = os.path.join(settings.BASE_DIR, 'app', 'data')
+    dossier_data = os.path.join(settings.BASE_DIR, 'app/static', 'data')
 
     fichiers_mp3 = [f for f in os.listdir(dossier_data) if f.endswith('.mp3')]
 
